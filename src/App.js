@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+
+import Navigation from './Navigation';
+import LandingPage from './LandingPage';
+import UserPage from './UserPage';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isLoggedIn: null
+    }
+  }
+
+  componentDidMount() {
+    this.setState({ isLoggedIn: false });
+  }
+
+  login = (username, password) => {
+    if (username === 'jzanderson09' &&
+    password === 'password123') {
+      this.setState({ isLoggedIn: true });
+    }
+  }
+
+  render() {
+    if (this.state.isLoggedIn === null ||
+    this.state.isLoggedIn === false) {
+      return (
+        <div className="App-container">
+          <Navigation />
+          <LandingPage 
+            login={this.login}
+          />
+        </div>
+      );
+    }
+    else {
+      return (
+        <div className='App-container'>
+          <Navigation />
+          <UserPage />
+        </div>
+      );
+    }
+  }
 }
 
 export default App;

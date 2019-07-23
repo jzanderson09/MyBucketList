@@ -1,0 +1,14 @@
+.LandingPage-container {
+    border: 1px solid orange;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.LandingPage-container .input-form {
+    margin: 1%;
+    /* border: 1px solid purple; */
+    box-shadow: 10px 10px gray;
+    display: flex;
+    flex-flow: column nowrap;
+}
