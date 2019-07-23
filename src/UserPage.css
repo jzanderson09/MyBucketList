@@ -1,0 +1,24 @@
+.UserPage-container {
+    border: 1px solid green;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.UserPage-container .greeting {
+    width: 100%;
+    margin-right: 78%;
+    margin-top: 1%;
+}
+
+.UserPage-container .bucketlist-container {
+    border: 5px solid black;
+    box-shadow: 10px 10px grey;
+    width: 40%;
+    margin: 1%;
+}
+
+.UserPage-container .bucketlist-container .bucketlist {
+    list-style-type: square;
+}

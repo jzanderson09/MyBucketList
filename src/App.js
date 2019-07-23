@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({ isLoggedIn: false });
+    this.setState({ isLoggedIn: true });
   }
 
   login = (username, password) => {
