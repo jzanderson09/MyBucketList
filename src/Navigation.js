@@ -35,12 +35,6 @@ class Navigation extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className='ml-auto' navbar>
             <NavItem>
-              <NavLink to='/bucketlist'> My Bucket List </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to='/bucketlist/item-form'> Add Item </NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink to='/register'> Sign Up </NavLink>
             </NavItem>
             {this.props.isLoggedIn && (
